@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-file
+data: 
+  index.js: |-
+    module.exports = () => {
+      const data = { rand: [] }
+      // Create 100 rows
+      for (let i = 0; i < 100; i++) {
+        data.rand.push({ recorded_timestamp: Date.now(), value: Math.random() })
+      }
+      return data
+    }
