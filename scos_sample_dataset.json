@@ -1,0 +1,72 @@
+{
+  "business": {
+    "categories": null,
+    "conformsToUri": "",
+    "contactEmail": "",
+    "contactName": "N/A",
+    "dataTitle": "Sample Streaming Dataset",
+    "describedByMimeType": "",
+    "describedByUrl": "",
+    "description": "Sample streaming dataset - 100 rows every 10 seconds",
+    "homepage": "https://smartcolumbusos.com/",
+    "issuedDate": "07/26/2019",
+    "keywords": [
+      "scos",
+      "development",
+      "sample",
+      "stream",
+      "streaming"
+    ],
+    "language": "US-English",
+    "license": "http://www.opendefinition.org/licenses/cc-by",
+    "modifiedDate": "07/26/2019",
+    "orgTitle": "scos",
+    "parentDataset": "",
+    "publishFrequency": "",
+    "referenceUrls": "",
+    "rights": "",
+    "spatial": "",
+    "temporal": ""
+  },
+  "id": "812a4158-7e77-4b1c-92a4-36e09db56173",
+  "technical": {
+    "cadence": 10000,
+    "dataName": "812a4158_7e77_4b1c_92a4_36e09db56173",
+    "headers": {},
+    "orgId": "962b386d-6406-40f0-8fe0-40caaa15f012",
+    "orgName": "scos",
+    "partitioner": {
+      "query": null,
+      "type": null
+    },
+    "private": false,
+    "sourceQueryParams": {},
+    "schema": [
+
+      {
+        "biased": "No",
+        "demographic": "None",
+        "description": "recorded_timestamp in epoch",
+        "masked": "N/A",
+        "name": "recorded_timestamp",
+        "pii": "None",
+        "type": "long"
+      },
+      {
+        "biased": "No",
+        "demographic": "None",
+        "description": "random value between 0 and 1",
+        "masked": "N/A",
+        "name": "value",
+        "pii": "None",
+        "type": "float"
+      }
+    ],
+    "sourceFormat": "json",
+    "sourceType": "stream",
+    "sourceUrl": "http://json-server.testing/api/v1/rand",
+    "systemName": "",
+    "transformations": [],
+    "validations": []
+  }
+}

@@ -39,9 +39,12 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
           - name: config-volume
-            mountPath: /data/index.js
-            subPath: index.js
-          args: ["/data/index.js"]
+            mountPath: /data/mid.js
+            subPath: mid.js
+          - name: config-volume
+            mountPath: /data/empty.json
+            subPath: empty.json
+          args: ["empty.json", "--middlewares", "/data/mid.js"]
       volumes:
         - name: config-volume
           configMap:

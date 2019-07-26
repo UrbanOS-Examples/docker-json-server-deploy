@@ -3,11 +3,13 @@ kind: ConfigMap
 metadata:
   name: config-file
 data: 
-  index.js: |-
-    module.exports = () => {
+  mid.js: |-
+    module.exports = (req, res, next) => {
       const data = { rand: [] }
-      for (let i = 0; i < {{ .Values.tracerConfig.rowCount }}; i++) {
-        data.rand.push({ recorded_timestamp: Date.now(), value: Math.random() })
+      for (let i = 0; i < {{ .Values.sampleDatasetConfig.rowCount }}; i++) {
+          data.rand.push({ recorded_timestamp: Date.now(), value: Math.random() })
       }
-      return data
+      res.send(data.rand)
+      next()
     }
+  empty.json: ""
