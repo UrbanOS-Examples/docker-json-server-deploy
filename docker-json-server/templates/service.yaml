@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: generator
+  name: {{ include "docker-json-server.fullname" . }}
   labels:
     app.kubernetes.io/name: {{ include "docker-json-server.name" . }}
     helm.sh/chart: {{ include "docker-json-server.chart" . }}
