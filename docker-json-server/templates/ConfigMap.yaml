@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-file
+data: 
+  mid.js: |-
+    module.exports = (req, res, next) => {
+      const data = { rand: [] }
+      var curDate = new Date(Date.now())
+      for (let i = 0; i < {{ .Values.sampleDatasetConfig.rowCount }}; i++) {
+          data.rand.push({ recorded_timestamp: curDate.toISOString(), value: Math.random() })
+      }
+      res.send(data.rand)
+      next()
+    }
+  empty.json: ""

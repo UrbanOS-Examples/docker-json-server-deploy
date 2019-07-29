@@ -1,0 +1,25 @@
+
+replicaCount: 1
+
+image:
+  repository: clue/json-server
+  tag: latest
+  pullPolicy: IfNotPresent
+
+nameOverride: "json-server"
+fullnameOverride: "json-server"
+
+service:
+  type: NodePort
+  port: 80
+  
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+sampleDatasetConfig:
+  rowCount: 3
