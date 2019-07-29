@@ -6,8 +6,9 @@ data:
   mid.js: |-
     module.exports = (req, res, next) => {
       const data = { rand: [] }
+      var curDate = new Date(Date.now())
       for (let i = 0; i < {{ .Values.sampleDatasetConfig.rowCount }}; i++) {
-          data.rand.push({ recorded_timestamp: Date.now(), value: Math.random() })
+          data.rand.push({ recorded_timestamp: curDate.toISOString(), value: Math.random() })
       }
       res.send(data.rand)
       next()

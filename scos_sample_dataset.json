@@ -7,7 +7,7 @@
     "dataTitle": "Sample Streaming Dataset",
     "describedByMimeType": "",
     "describedByUrl": "",
-    "description": "Sample streaming dataset - 100 rows every 10 seconds",
+    "description": "Sample streaming dataset - 3 rows every 10 seconds",
     "homepage": "https://smartcolumbusos.com/",
     "issuedDate": "07/26/2019",
     "keywords": [
@@ -30,7 +30,7 @@
   },
   "id": "812a4158-7e77-4b1c-92a4-36e09db56173",
   "technical": {
-    "cadence": 10000,
+    "cadence": 500,
     "dataName": "812a4158_7e77_4b1c_92a4_36e09db56173",
     "headers": {},
     "orgId": "962b386d-6406-40f0-8fe0-40caaa15f012",
@@ -42,7 +42,6 @@
     "private": false,
     "sourceQueryParams": {},
     "schema": [
-
       {
         "biased": "No",
         "demographic": "None",
@@ -50,7 +49,7 @@
         "masked": "N/A",
         "name": "recorded_timestamp",
         "pii": "None",
-        "type": "long"
+        "type": "timestamp"
       },
       {
         "biased": "No",
