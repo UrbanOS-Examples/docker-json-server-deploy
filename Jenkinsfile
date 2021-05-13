@@ -40,7 +40,6 @@ def deployTo(environment, extraArgs = '') {
     scos.withEksCredentials(environment) {
         sh("""#!/bin/bash
             set -e
-            helm init --client-only
             helm upgrade --install json-server docker-json-server \
                 --namespace=testing \
                 ${extraArgs}
